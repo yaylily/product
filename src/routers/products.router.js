@@ -61,7 +61,7 @@ router.patch("/products/:productId", async (req, res, next) => {
 
   await Product.updateOne(
     { _id: productId },
-    { $set: { name, description, manager, status } }
+    { $set: { name, description, manager, status } },
   );
 
   return res.status(200).json({});
